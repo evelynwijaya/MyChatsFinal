@@ -15,27 +15,28 @@ public class RegisterActivity extends AppCompatActivity {
     Button bt_regis;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+   protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        et_nama = (EditText)findViewById(R.id.et_nama);
+
+        et_nama = (EditText) findViewById(R.id.et_nama);
         et_nohpregis = (EditText) findViewById(R.id.et_nohpregis);
         et_email = (EditText) findViewById(R.id.et_email);
+        bt_regis = (Button) findViewById(R.id.bt_regis);
 
-        bt_regis= (Button) findViewById(R.id.bt_regis);
         bt_regis.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 user = new User();
                 user.setNama(et_nama.getText().toString());
+                user.setTelepon(et_nohpregis.getText().toString());
                 user.setEmail(et_email.getText().toString());
-                user.setTelp(et_nohpregis.getText().toString());
                 user.register();
-                Toast.makeText(getApplicationContext(),"Sukses",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }

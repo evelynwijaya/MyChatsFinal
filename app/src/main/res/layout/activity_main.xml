@@ -37,8 +37,7 @@
             android:background="#f6edf7"
             android:layout_weight="1"/>
 
-        <ImageButton
-            android:src="@drawable/ic_send_black_24dp"
+        <Button
             android:id="@+id/bt_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -36,7 +36,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatsH
     }
 
     @Override
-    public ChatListAdapter.ChatsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ChatsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view =  inflater.inflate(R.layout.chat_card,parent,false);
         ChatsHolder holder = new ChatsHolder(view);
         return holder;
@@ -84,9 +84,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ChatsH
             tv_tanggal.setText(dateString);
 
             String uid = mylocaldata.getString("uid"," ");
-            Log.d(">>>HP Sender>>>",current.getSender().getTelp());
-            Log.d(">>>HP Sender>>>",uid);
-            if (current.getSender().getTelp().equals(uid)){
+
+            if (current.getSender().getTelepon().equals(uid)){
                 thischat.setCardBackgroundColor(Color.parseColor("#eeffdd"));
             } else
             {

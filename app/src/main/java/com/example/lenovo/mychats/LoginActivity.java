@@ -52,10 +52,10 @@ public class LoginActivity extends AppCompatActivity {
                         if (dataSnapshot.exists()){
                             user.setNama(dataSnapshot.child("nama").getValue(String.class));
                             user.setEmail(dataSnapshot.child("email").getValue(String.class));
-                            user.setTelp(dataSnapshot.child("telepon").getValue(String.class));
+                            user.setTelepon(dataSnapshot.child("telepon").getValue(String.class));
 
                             SharedPreferences.Editor editor = mylocaldata.edit();
-                            editor.putString("uid",user.getTelp());
+                            editor.putString("uid",user.getTelepon());
                             editor.apply();
 
                             //pindah ke main activity
