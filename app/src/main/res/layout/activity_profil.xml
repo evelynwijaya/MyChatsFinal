@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffcc"
+    tools:context="com.example.lenovo.mychats.ProfilActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_foto"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ccdd"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_namaprofil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Sayaa"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_emailprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emailll"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_notlp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No.Handphone "
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,13 +15,12 @@ public class User implements Parcelable {
     private String email;
     private String telepon;
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference userRef = database.getReference("users");
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference userRef = database.getReference("users");
 
-
-    public void register(){
-        userRef.child(this.telepon).setValue(this);
-    }
+//    public void register(){
+//        userRef.child(this.telepon).setValue(this);
+//    }
 
 
     public String getNama() {

@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 chat.setPesan(et_ketik.getText().toString());
                 chat.setTanggal(new Date().getTime());
                 chat.setSender(user);
-
+                chat.send();
                 et_ketik.setText(" ");
             }
         });
@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.menuUser:
                 Intent intent = new Intent(MainActivity.this, UserListActivity.class);
+                //intent.putExtra("user",user);
                 startActivity(intent);
                 return true;
             case R.id.menuLogout:

@@ -8,6 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class RegisterActivity extends AppCompatActivity {
 
     User user;
@@ -31,10 +35,17 @@ public class RegisterActivity extends AppCompatActivity {
                 user.setNama(et_nama.getText().toString());
                 user.setTelepon(et_nohpregis.getText().toString());
                 user.setEmail(et_email.getText().toString());
-                user.register();
 
-                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
-                startActivity(intent);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference userRef = database.getReference("users");
+
+                userRef.child(user.getTelepon()).setValue(user, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                        Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
