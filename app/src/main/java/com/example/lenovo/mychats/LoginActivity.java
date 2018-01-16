@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText et_nohp,et_pass;
+    EditText et_nohp;
     Button bt_login, bt_regis;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -32,7 +32,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         et_nohp = (EditText) findViewById(R.id.et_nohp);
-       // et_pass = (EditText ) findViewById(R.id.et_pass);
         bt_login = (Button) findViewById(R.id.bt_login);
         bt_regis = (Button) findViewById(R.id.bt_regis);
 
@@ -40,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nomorhp = et_nohp.getText().toString();
-                //String password = et_pass.getText().toString();
 
                 //pemanggilan data pada firebase berdasarkan no hp
 
